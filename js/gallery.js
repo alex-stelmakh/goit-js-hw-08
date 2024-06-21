@@ -92,8 +92,8 @@ gallery.insertAdjacentHTML('beforeend', createMarkup(images));
 function handlerShowFullImage(event) {
   event.preventDefault();
 
-  if (event.target.nodeName === event.currentTarget.nodeName) {
-    return; 
+  if (event.target.nodeName !== 'IMG'){
+    return;
   }
 
   const instance = basicLightbox.create(`
